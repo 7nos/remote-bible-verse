@@ -22,34 +22,29 @@
 
 body {
     font-family: 'Ramaraja', sans-serif;
-    background: linear-gradient(135deg, var(--bg-gradient-start), var(--bg-gradient-end));
+    background: transparent;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: flex-start;
+    align-items: center;
     color: var(--text-primary);
     overflow: hidden;
     width: 100%;
+    padding: 2rem 4rem;
+    text-align: center;
 }
 
 .verse-text {
     font-family: 'Ramaraja', sans-serif;
     font-size: 4rem;
     font-style: italic;
+    color: #000000;
     line-height: 1.5;
     text-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
-    display: inline-block;
-    white-space: nowrap;
-    padding-left: 100vw;
-    box-sizing: content-box;
-    animation: marquee 20s linear infinite;
-    margin-bottom: 2rem;
-}
-
-@keyframes marquee {
-    0% { transform: translateX(0); }
-    100% { transform: translateX(-100%); }
+    white-space: normal;
+    word-wrap: break-word;
+    max-width: 90vw;
 }
 
 .verse-reference {
@@ -58,8 +53,7 @@ body {
     font-weight: 600;
     letter-spacing: 2px;
     text-transform: uppercase;
-    margin-bottom: 4rem;
-    align-self: center;
+    margin-bottom: 1.5rem;
 }
 
 @media (max-width: 768px) {

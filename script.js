@@ -13,14 +13,9 @@ async function pollVerse() {
         
         // Only update the DOM if the verse has actually changed
         if (newRef !== currentVerseRef) {
-            verseText.textContent = `"${data.verseText}"`;
-            verseReference.textContent = `- ${newRef}`;
+            verseText.textContent = data.verseText;
+            verseReference.textContent = newRef;
             currentVerseRef = newRef;
-            
-            // Optional: reset the marquee animation so it starts from the right again smoothly
-            verseText.style.animation = 'none';
-            verseText.offsetHeight; /* trigger reflow */
-            verseText.style.animation = 'marquee 20s linear infinite';
         }
     } catch (error) {
         console.error('Error fetching current verse:', error);
