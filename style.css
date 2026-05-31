@@ -37,30 +37,31 @@ body {
 
 .verse-text {
     font-family: 'Ramaraja', sans-serif;
-    font-size: 4rem;
-    font-style: italic;
+    font-size: 3rem;
     color: #000000;
-    line-height: 1.5;
-    text-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
+    line-height: 1.0;
+
     white-space: normal;
-    word-wrap: break-word;
+    overflow-wrap: break-word;
+    hyphens: auto;
     max-width: 90vw;
 }
 
 .verse-reference {
+    font-family: 'Ramaraja', sans-serif;
     font-size: 2.5rem;
-    color: var(--accent);
-    font-weight: 600;
+    color: red;
+    font-weight: 500;
     letter-spacing: 2px;
     text-transform: uppercase;
-    margin-bottom: 1.5rem;
+    margin-bottom: 0rem;
 }
 
 @media (max-width: 768px) {
     .verse-text {
         font-size: 2.5rem;
     }
-    
+
     .verse-reference {
         font-size: 1.75rem;
     }
